@@ -4,7 +4,7 @@ module binary_to_7segment(
    
      always@(*)begin
          case(b)
-        4'b0000:s=7'b1111110;
+    4'b0000:s=7'b1111110;
 	4'b0001:s=7'b0110000;
 	4'b0010:s=7'b1101101;
 	4'b0011:s=7'b1111001;
