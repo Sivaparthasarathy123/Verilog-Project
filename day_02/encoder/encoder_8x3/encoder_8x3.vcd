@@ -1,0 +1,68 @@
+$date
+	Sat Oct 11 11:47:42 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module encoder_8x3_tb $end
+$var wire 3 ! y [2:0] $end
+$var reg 8 " a [7:0] $end
+$var integer 32 # i [31:0] $end
+$scope module inst $end
+$var wire 8 $ a [7:0] $end
+$var wire 3 % y [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 %
+b10 $
+b1 #
+b10 "
+b1 !
+$end
+#5
+b10 !
+b10 %
+b100 "
+b100 $
+b10 #
+#10
+b11 !
+b11 %
+b1000 "
+b1000 $
+b11 #
+#15
+b100 !
+b100 %
+b10000 "
+b10000 $
+b100 #
+#20
+b101 !
+b101 %
+b100000 "
+b100000 $
+b101 #
+#25
+b110 !
+b110 %
+b1000000 "
+b1000000 $
+b110 #
+#30
+b111 !
+b111 %
+b10000000 "
+b10000000 $
+b111 #
+#35
+b1000 #

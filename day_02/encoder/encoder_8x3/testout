@@ -1,0 +1,102 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x62ab3a605a50 .scope module, "encoder_8x3_tb" "encoder_8x3_tb" 2 1;
+ .timescale 0 0;
+v0x62ab3a61ed10_0 .var "a", 7 0;
+v0x62ab3a61edd0_0 .var/i "i", 31 0;
+v0x62ab3a61ee90_0 .net "y", 2 0, L_0x62ab3a61fc30;  1 drivers
+S_0x62ab3a605be0 .scope module, "inst" "encoder_8x3" 2 6, 3 1 0, S_0x62ab3a605a50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /OUTPUT 3 "y";
+L_0x62ab3a61f100 .functor OR 1, L_0x62ab3a61ef90, L_0x62ab3a61f060, C4<0>, C4<0>;
+L_0x62ab3a61f2e0 .functor OR 1, L_0x62ab3a61f100, L_0x62ab3a61f240, C4<0>, C4<0>;
+L_0x62ab3a61f470 .functor OR 1, L_0x62ab3a61f2e0, L_0x62ab3a61f3a0, C4<0>, C4<0>;
+L_0x62ab3a61f700 .functor OR 1, L_0x62ab3a61f580, L_0x62ab3a61f620, C4<0>, C4<0>;
+L_0x62ab3a61f8e0 .functor OR 1, L_0x62ab3a61f700, L_0x62ab3a61f840, C4<0>, C4<0>;
+L_0x62ab3a61fae0 .functor OR 1, L_0x62ab3a61f8e0, L_0x62ab3a61f9f0, C4<0>, C4<0>;
+L_0x62ab3a61ff60 .functor OR 1, L_0x62ab3a61fdc0, L_0x62ab3a61fec0, C4<0>, C4<0>;
+L_0x62ab3a620130 .functor OR 1, L_0x62ab3a61ff60, L_0x62ab3a620020, C4<0>, C4<0>;
+L_0x62ab3a620330 .functor OR 1, L_0x62ab3a620130, L_0x62ab3a620290, C4<0>, C4<0>;
+v0x62ab3a605dc0_0 .net *"_ivl_10", 0 0, L_0x62ab3a61f2e0;  1 drivers
+v0x62ab3a61d940_0 .net *"_ivl_13", 0 0, L_0x62ab3a61f3a0;  1 drivers
+v0x62ab3a61da20_0 .net *"_ivl_14", 0 0, L_0x62ab3a61f470;  1 drivers
+v0x62ab3a61dae0_0 .net *"_ivl_19", 0 0, L_0x62ab3a61f580;  1 drivers
+v0x62ab3a61dbc0_0 .net *"_ivl_21", 0 0, L_0x62ab3a61f620;  1 drivers
+v0x62ab3a61dcf0_0 .net *"_ivl_22", 0 0, L_0x62ab3a61f700;  1 drivers
+v0x62ab3a61ddd0_0 .net *"_ivl_25", 0 0, L_0x62ab3a61f840;  1 drivers
+v0x62ab3a61deb0_0 .net *"_ivl_26", 0 0, L_0x62ab3a61f8e0;  1 drivers
+v0x62ab3a61df90_0 .net *"_ivl_29", 0 0, L_0x62ab3a61f9f0;  1 drivers
+v0x62ab3a61e070_0 .net *"_ivl_3", 0 0, L_0x62ab3a61ef90;  1 drivers
+v0x62ab3a61e150_0 .net *"_ivl_30", 0 0, L_0x62ab3a61fae0;  1 drivers
+v0x62ab3a61e230_0 .net *"_ivl_36", 0 0, L_0x62ab3a61fdc0;  1 drivers
+v0x62ab3a61e310_0 .net *"_ivl_38", 0 0, L_0x62ab3a61fec0;  1 drivers
+v0x62ab3a61e3f0_0 .net *"_ivl_39", 0 0, L_0x62ab3a61ff60;  1 drivers
+v0x62ab3a61e4d0_0 .net *"_ivl_42", 0 0, L_0x62ab3a620020;  1 drivers
+v0x62ab3a61e5b0_0 .net *"_ivl_43", 0 0, L_0x62ab3a620130;  1 drivers
+v0x62ab3a61e690_0 .net *"_ivl_46", 0 0, L_0x62ab3a620290;  1 drivers
+v0x62ab3a61e770_0 .net *"_ivl_47", 0 0, L_0x62ab3a620330;  1 drivers
+v0x62ab3a61e850_0 .net *"_ivl_5", 0 0, L_0x62ab3a61f060;  1 drivers
+v0x62ab3a61e930_0 .net *"_ivl_6", 0 0, L_0x62ab3a61f100;  1 drivers
+v0x62ab3a61ea10_0 .net *"_ivl_9", 0 0, L_0x62ab3a61f240;  1 drivers
+v0x62ab3a61eaf0_0 .net "a", 7 0, v0x62ab3a61ed10_0;  1 drivers
+v0x62ab3a61ebd0_0 .net "y", 2 0, L_0x62ab3a61fc30;  alias, 1 drivers
+L_0x62ab3a61ef90 .part v0x62ab3a61ed10_0, 7, 1;
+L_0x62ab3a61f060 .part v0x62ab3a61ed10_0, 6, 1;
+L_0x62ab3a61f240 .part v0x62ab3a61ed10_0, 5, 1;
+L_0x62ab3a61f3a0 .part v0x62ab3a61ed10_0, 4, 1;
+L_0x62ab3a61f580 .part v0x62ab3a61ed10_0, 7, 1;
+L_0x62ab3a61f620 .part v0x62ab3a61ed10_0, 6, 1;
+L_0x62ab3a61f840 .part v0x62ab3a61ed10_0, 3, 1;
+L_0x62ab3a61f9f0 .part v0x62ab3a61ed10_0, 2, 1;
+L_0x62ab3a61fc30 .concat8 [ 1 1 1 0], L_0x62ab3a620330, L_0x62ab3a61fae0, L_0x62ab3a61f470;
+L_0x62ab3a61fdc0 .part v0x62ab3a61ed10_0, 7, 1;
+L_0x62ab3a61fec0 .part v0x62ab3a61ed10_0, 5, 1;
+L_0x62ab3a620020 .part v0x62ab3a61ed10_0, 3, 1;
+L_0x62ab3a620290 .part v0x62ab3a61ed10_0, 1, 1;
+    .scope S_0x62ab3a605a50;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "encoder_8x3.vcd" {0 0 0};
+    %vpi_call 2 9 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x62ab3a605a50;
+T_1 ;
+    %vpi_call 2 12 "$monitor", "time=%0t| a=%b| y=%b", $time, v0x62ab3a61ed10_0, v0x62ab3a61ee90_0 {0 0 0};
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0x62ab3a61ed10_0, 0, 8;
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v0x62ab3a61edd0_0, 0, 32;
+T_1.0 ;
+    %load/vec4 v0x62ab3a61edd0_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_1.1, 5;
+    %load/vec4 v0x62ab3a61ed10_0;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftl 4;
+    %store/vec4 v0x62ab3a61ed10_0, 0, 8;
+    %delay 5, 0;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x62ab3a61edd0_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0x62ab3a61edd0_0, 0, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %vpi_call 2 18 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "encoder_8x3_tb.v";
+    "encoder_8x3.v";

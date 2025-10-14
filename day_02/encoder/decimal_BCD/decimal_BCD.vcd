@@ -1,0 +1,86 @@
+$date
+	Sat Oct 11 13:20:30 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module decimal_BCD_tb $end
+$var wire 4 ! y [3:0] $end
+$var reg 10 " a [9:0] $end
+$var integer 32 # i [31:0] $end
+$scope module inst $end
+$var wire 10 $ a [9:0] $end
+$var wire 4 % y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+b0 $
+bx #
+b0 "
+b0 !
+$end
+#5
+b1 !
+b1 %
+b1 #
+b10 "
+b10 $
+#10
+b10 !
+b10 %
+b100 "
+b100 $
+b10 #
+#15
+b11 !
+b11 %
+b1000 "
+b1000 $
+b11 #
+#20
+b100 !
+b100 %
+b10000 "
+b10000 $
+b100 #
+#25
+b111 !
+b111 %
+b100000 "
+b100000 $
+b101 #
+#30
+b100 !
+b100 %
+b1000000 "
+b1000000 $
+b110 #
+#35
+b111 !
+b111 %
+b10000000 "
+b10000000 $
+b111 #
+#40
+b1000 !
+b1000 %
+b100000000 "
+b100000000 $
+b1000 #
+#45
+b1001 !
+b1001 %
+b1000000000 "
+b1000000000 $
+b1001 #
+#50
+b1010 #

@@ -1,0 +1,81 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5b6eb5a32e20 .scope module, "full_subtractor_tb" "full_subtractor_tb" 2 1;
+ .timescale 0 0;
+v0x5b6eb5a48f50_0 .var "a", 0 0;
+v0x5b6eb5a49010_0 .var "b", 0 0;
+v0x5b6eb5a490b0_0 .var "bin", 0 0;
+v0x5b6eb5a491b0_0 .net "bout", 0 0, L_0x5b6eb5a49a70;  1 drivers
+v0x5b6eb5a49280_0 .net "d", 0 0, L_0x5b6eb5a49500;  1 drivers
+v0x5b6eb5a49320_0 .var/i "i", 31 0;
+S_0x5b6eb5a32fb0 .scope module, "inst" "full_subtractor" 2 7, 3 1 0, S_0x5b6eb5a32e20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "bin";
+    .port_info 3 /OUTPUT 1 "d";
+    .port_info 4 /OUTPUT 1 "bout";
+L_0x5b6eb5a493c0 .functor XOR 1, v0x5b6eb5a48f50_0, v0x5b6eb5a49010_0, C4<0>, C4<0>;
+L_0x5b6eb5a49500 .functor XOR 1, L_0x5b6eb5a493c0, v0x5b6eb5a490b0_0, C4<0>, C4<0>;
+L_0x5b6eb5a49660 .functor NOT 1, v0x5b6eb5a48f50_0, C4<0>, C4<0>, C4<0>;
+L_0x5b6eb5a496d0 .functor AND 1, L_0x5b6eb5a49660, v0x5b6eb5a49010_0, C4<1>, C4<1>;
+L_0x5b6eb5a497c0 .functor XOR 1, v0x5b6eb5a48f50_0, v0x5b6eb5a49010_0, C4<0>, C4<0>;
+L_0x5b6eb5a49950 .functor NOT 1, L_0x5b6eb5a497c0, C4<0>, C4<0>, C4<0>;
+L_0x5b6eb5a49a00 .functor AND 1, L_0x5b6eb5a49950, v0x5b6eb5a490b0_0, C4<1>, C4<1>;
+L_0x5b6eb5a49a70 .functor OR 1, L_0x5b6eb5a496d0, L_0x5b6eb5a49a00, C4<0>, C4<0>;
+v0x5b6eb5a33190_0 .net *"_ivl_0", 0 0, L_0x5b6eb5a493c0;  1 drivers
+v0x5b6eb5a48660_0 .net *"_ivl_10", 0 0, L_0x5b6eb5a49950;  1 drivers
+v0x5b6eb5a48740_0 .net *"_ivl_12", 0 0, L_0x5b6eb5a49a00;  1 drivers
+v0x5b6eb5a48800_0 .net *"_ivl_4", 0 0, L_0x5b6eb5a49660;  1 drivers
+v0x5b6eb5a488e0_0 .net *"_ivl_6", 0 0, L_0x5b6eb5a496d0;  1 drivers
+v0x5b6eb5a48a10_0 .net *"_ivl_8", 0 0, L_0x5b6eb5a497c0;  1 drivers
+v0x5b6eb5a48af0_0 .net "a", 0 0, v0x5b6eb5a48f50_0;  1 drivers
+v0x5b6eb5a48bb0_0 .net "b", 0 0, v0x5b6eb5a49010_0;  1 drivers
+v0x5b6eb5a48c70_0 .net "bin", 0 0, v0x5b6eb5a490b0_0;  1 drivers
+v0x5b6eb5a48d30_0 .net "bout", 0 0, L_0x5b6eb5a49a70;  alias, 1 drivers
+v0x5b6eb5a48df0_0 .net "d", 0 0, L_0x5b6eb5a49500;  alias, 1 drivers
+    .scope S_0x5b6eb5a32e20;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "full_subtractor.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x5b6eb5a32e20;
+T_1 ;
+    %vpi_call 2 15 "$display", "time\011a\011b\011bin\011|\011d\011bout" {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x5b6eb5a49320_0, 0, 32;
+T_1.0 ;
+    %load/vec4 v0x5b6eb5a49320_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_1.1, 5;
+    %load/vec4 v0x5b6eb5a49320_0;
+    %pad/s 3;
+    %split/vec4 1;
+    %store/vec4 v0x5b6eb5a490b0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x5b6eb5a49010_0, 0, 1;
+    %store/vec4 v0x5b6eb5a48f50_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 20 "$display", "%0t\011%b\011%b\011%b\011|\011%b\011%b", $time, v0x5b6eb5a48f50_0, v0x5b6eb5a49010_0, v0x5b6eb5a490b0_0, v0x5b6eb5a49280_0, v0x5b6eb5a491b0_0 {0 0 0};
+    %load/vec4 v0x5b6eb5a49320_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x5b6eb5a49320_0, 0, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %vpi_call 2 22 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "full_subtractor_tb.v";
+    "full_subtractor.v";

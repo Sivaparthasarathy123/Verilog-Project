@@ -1,0 +1,49 @@
+$date
+	Fri Oct 10 16:56:14 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module parity_generator_9bit_tb $end
+$var wire 1 ! parity_odd $end
+$var wire 1 " parity_even $end
+$var reg 9 # data [8:0] $end
+$scope module inst $end
+$var wire 9 $ data [8:0] $end
+$var wire 1 ! parity_odd $end
+$var wire 1 " parity_even $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10101010 $
+b10101010 #
+0"
+1!
+$end
+#5
+0!
+1"
+b10001001 #
+b10001001 $
+#10
+1!
+0"
+b11101110 #
+b11101110 $
+#15
+b0 #
+b0 $
+#20
+0!
+1"
+b111111111 #
+b111111111 $
+#25
