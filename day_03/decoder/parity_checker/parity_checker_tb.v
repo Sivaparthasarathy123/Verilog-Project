@@ -12,7 +12,7 @@ module parity_checker_tb();
       a=$random;
       if($urandom_range(0,1))begin
         a=~a;
-        $display("value flipped %0d!",i);
+        $display("value flipped %0b!",i);
         #10;
       end
     end
@@ -20,3 +20,4 @@ module parity_checker_tb();
   end
 endmodule
     
+
