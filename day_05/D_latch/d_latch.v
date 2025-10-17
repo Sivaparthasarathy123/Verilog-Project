@@ -1,4 +1,8 @@
-module d_latch(input D,E, output Q,Qbar);
+module d_latch(
+  input D,
+  input E, 
+  output reg Q,
+  output reg Qbar);
   always(*)begin
     if(E==1)begin
       case(D)
