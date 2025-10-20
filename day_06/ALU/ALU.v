@@ -4,7 +4,7 @@ module ALU(
   input [3:0]Sel,
   output reg [15:0]ALU_out,
   output reg carry_out,
-  output reg Borrow_out,
+  output reg borrow_out,
   output reg zero_flag,overflow_flag,Negative_flag,carry_flag);
 
   always@(*)begin
@@ -17,7 +17,7 @@ module ALU(
 
         4'b0001: begin 
             {Borrow_out, ALU_out} = A - B;
-            carry_flag = Borrow_out; 
+            carry_flag = borrow_out; 
             overflow_flag = (~A[15] & B[15] & ALU_out[15]) | (A[15] & ~B[15] & ~ALU_out[15]);
         end
       4'b0010:ALU_out = A+1;
