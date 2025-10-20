@@ -1,0 +1,81 @@
+$date
+	Mon Oct 20 17:50:31 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ALU_tb $end
+$var wire 1 ! zero_flag $end
+$var wire 1 " overflow_flag $end
+$var wire 1 # negative_flag $end
+$var wire 1 $ carry_out $end
+$var wire 1 % carry_flag $end
+$var wire 1 & borrow_out $end
+$var wire 16 ' ALU_out [15:0] $end
+$var reg 16 ( A [15:0] $end
+$var reg 16 ) B [15:0] $end
+$var reg 4 * Sel [3:0] $end
+$scope module inst $end
+$var wire 16 + A [15:0] $end
+$var wire 16 , B [15:0] $end
+$var wire 4 - Sel [3:0] $end
+$var reg 16 . ALU_out [15:0] $end
+$var reg 1 & borrow_out $end
+$var reg 1 % carry_flag $end
+$var reg 1 $ carry_out $end
+$var reg 1 # negative_flag $end
+$var reg 1 " overflow_flag $end
+$var reg 1 ! zero_flag $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b100010110100100 .
+b0 -
+b100010110101010 ,
+b1111111111111010 +
+b0 *
+b100010110101010 )
+b1111111111111010 (
+b100010110100100 '
+0&
+1%
+1$
+0#
+0"
+0!
+$end
+#10
+1#
+b1011101001010000 '
+b1011101001010000 .
+0%
+0$
+b1 *
+b1 -
+#20
+1!
+b0 '
+b0 .
+0#
+b1100 *
+b1100 -
+#30
+b101 '
+b101 .
+0!
+b1000 *
+b1000 -
+#40
+b100010110101010 '
+b100010110101010 .
+b100 *
+b100 -
+#50
