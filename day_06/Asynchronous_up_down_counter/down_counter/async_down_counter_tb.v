@@ -10,8 +10,8 @@ module async_down_counter_tb();
         forever #5 clk = ~clk;
     end
    initial begin
-     $monitor("%0t|clk=%b|rst=%b|down=%b",$time,clk,rst,q);
-     $dumpfile("async_up.vcd");
+       $monitor("%0t|clk=%b|rst=%b|q=%b",$time,clk,rst,q);
+       $dumpfile("async_down.vcd");
      $dumpvars(0,async_down_counter_tb);
     end
     initial begin
