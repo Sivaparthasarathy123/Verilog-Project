@@ -35,7 +35,7 @@ module up_down_counter(
   always@(posedge (up_down ? Q[2] : ~Q[2]))begin
    if(rst)
     Q[3] <= 0;
-   else if([3])
+   else if(T[3])
     Q[3] <= ~Q[3];
 end
 
