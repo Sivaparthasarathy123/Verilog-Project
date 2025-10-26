@@ -2,7 +2,13 @@
 module async_up_counter(
     input clk,        
     input rst,       
-    output [3:0]q);
+    output reg[3:0]q);
+    /*always@(posedge clk)begin
+            if(rst)
+                    q=4'b0000;
+            else
+                    q = q + 1;
+    end*/
 
     T_ff t0 (.clk(clk),  .rst(rst), .q(q[0]));
     T_ff t1 (.clk(q[0]), .rst(rst), .q(q[1]));
