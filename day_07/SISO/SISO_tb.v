@@ -1,28 +1,29 @@
 module SISO_tb();
+  parameter N=4;
   reg clk;
   reg rst;
+  reg en;
   reg sin;
-  wire [3:0]q;
+  wire q;
 
-  SISO inst(clk,rst,sin,q);
+  SISO #(.N(N))inst(clk,rst,en,sin,q);
 
+  initial clk = 0;
   always #5 clk = ~clk;
   initial begin
-    $monitor("%0t|clk=%b|rst=%b|sin=%b|q=%b",$time,clk,rst,sin,q);
+    $monitor("Time=%0t|clk=%b|rst=%b|en=%b|sin=%b|q=%b",$time,clk,rst,en,sin,q);
     $dumpfile("SISO.vcd");
     $dumpvars;
 
-    clk = 0;
-    rst = 0;
+    rst = 1;
     sin = 0;
+    en=0;
+    #10 rst = 0;
+    en=1;repeat (50)begin
+    #10 sin = $random;
+    end
 
-    #10 rst = 1;
 
-    #10 sin = 1;
-    #10 sin = 0;
-    #10 sin = 1;
-    #10 sin = 0;
-
-    #50 $finish;
+    #33 $finish;
   end
 endmodule
