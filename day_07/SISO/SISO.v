@@ -1,16 +1,23 @@
-module SISO(
-    input clk,rst,sin,
-    output reg[3:0]q);
+//Serial in Serial Out Register
 
-    always@(posedge clk)begin
-      if(rst==0)
-          q <= 4'b0000;
-      else
-          q <= {q[3:0],sin};
-    end
-    endmodule
+module SISO#( parameter N=4)                                                                                               
+    (input clk,rst,en,                                                                                                       
+     input sin,                                                                                                              
+     output reg q);                                   
+    
+     reg [N-1:0]din; 
+     always@(posedge clk)begin      
+        if(rst)begin
+           q <= 0;din <= 0;
+        end
+        else if(en)begin
+           din <= {din[N-1:0],sin};
+           q=din[N-1];
+        end
+     end
+   endmodule
 
-module d_ff(
+/*module d_ff(
     input clk,rst,d,
     output reg q);
 
@@ -20,4 +27,4 @@ module d_ff(
        else
            q <= d;
    end
-endmodule
+endmodule*/
