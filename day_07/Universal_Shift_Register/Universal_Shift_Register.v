@@ -1,7 +1,7 @@
 module Universal_shift_register #(
       parameter N=4)(
       input clk,rst,
-      input [1:0]load,
+	  input [1:0]load,
       input [N-1:0]pin,
       input RSin,LSin,
       output reg [N-1:0]q);
