@@ -1,0 +1,70 @@
+$date
+	Sat Nov  8 05:57:17 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module Serial_2_complementer_tb $end
+$var wire 1 ! q $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$var reg 1 $ x $end
+$scope module inst $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var wire 1 $ x $end
+$var wire 1 % state $end
+$var parameter 1 & A $end
+$var parameter 1 ' B $end
+$var reg 1 ( next_state $end
+$var reg 1 ! q $end
+$scope module inst $end
+$var wire 1 ( D $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var reg 1 % Q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+1'
+0&
+$end
+#0
+$dumpvars
+0(
+0%
+0$
+1#
+0"
+0!
+$end
+#5000
+1"
+#10000
+0"
+0#
+#15000
+1"
+#20000
+1!
+1(
+0"
+1$
+#25000
+0!
+1%
+1"
+#30000
+0"
+#35000
+1"
+#40000
+1!
+0"
+0$
