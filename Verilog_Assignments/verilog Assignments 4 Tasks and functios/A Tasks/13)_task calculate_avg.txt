@@ -1,0 +1,13 @@
+task calculate_avg;
+        input [4:0]a;
+        utput [5:0]sum;
+        output avg_out;
+        integer i;
+        begin
+            sum = 0;
+            for (i=0; i<5; i++)
+                sum = sum + a[i];
+            avg_out = sum / 5;
+            $display("Average = %0d", avg_out);
+        end
+    endtask

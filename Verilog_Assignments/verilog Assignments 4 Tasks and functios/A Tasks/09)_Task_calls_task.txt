@@ -1,0 +1,20 @@
+//Task 1
+task add_task;
+        input x, y;
+        output sum;
+        begin
+            sum = x + y;
+        end
+    endtask
+
+// Task 2: 
+task double_add_task;
+        input  p, q;
+        output total;
+        integer temp;
+        begin
+            add_task(p, q, temp);
+            add_task(temp, q, total);
+            $display("Double Add Result = %0d", total);
+        end
+    endtask

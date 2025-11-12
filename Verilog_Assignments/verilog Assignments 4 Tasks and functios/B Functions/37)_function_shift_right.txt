@@ -1,0 +1,13 @@
+//Implement a function that shifts input right by n bits.
+
+module func_shift_right;
+    function [7:0] shift_right;
+        input [7:0] x;
+        input [2:0] n;
+        begin 
+             shift_right = x >> n; 
+        end
+    endfunction
+
+    initial $display("Shifted=%b", shift_right(8'b11110000,3));
+endmodule

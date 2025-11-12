@@ -1,0 +1,11 @@
+ task toggle_signal;
+        output reg sig;           // The signal to toggle (declared as reg)
+        integer i;
+    begin
+        sig = 0;                  // Initial value
+        for (i = 0; i < 10; i = i + 1) begin
+            #10 sig = ~sig;       // Toggle every 10 time units
+            $display("Time = %0t ns, Signal = %b", $time, sig);
+        end
+    end
+    endtask

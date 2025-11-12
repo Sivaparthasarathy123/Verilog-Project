@@ -1,0 +1,15 @@
+//Use $dumpfile and $dumpvars to generate waveform for a NOT gate.
+
+module dump_example;
+    reg a;
+    wire y;
+    not (y, a);
+
+    initial begin
+        $dumpfile("not_wave.vcd");
+        $dumpvars(0, dump_example);
+        #10 a = 0; 
+        #10 a = 1; 
+        #10 $finish;
+    end
+endmodule

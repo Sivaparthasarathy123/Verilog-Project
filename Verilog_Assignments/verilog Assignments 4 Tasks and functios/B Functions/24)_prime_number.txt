@@ -1,0 +1,28 @@
+//Implement a function to return 1 if input is a prime number, else 0
+
+module prime_number;
+    integer num;
+
+    function automatic integer prime;
+        input integer n;
+        integer i;
+        begin
+            if (n < 2)
+                prime = 0;     
+            else begin
+                prime = 1;    
+                for(i = 2; i <= n/2; i++)
+                    if (n % i == 0)
+                        is_prime = 0;  
+            end
+        end
+    endfunction
+
+  initial begin
+        num = 7;
+        if (prime(num))
+            $display("%0d is a Prime Number", num);
+        else
+            $display("%0d is NOT a Prime Number", num);
+    end
+endmodule

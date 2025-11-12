@@ -1,0 +1,14 @@
+module mul_display;
+    task mult;
+        input integer a, b;
+        output integer c;
+        begin
+            c = a * b;
+            $display("%0d x %0d = %0d", a, b, c);
+        end
+    endtask
+
+    initial begin
+        mult(6, 7);
+    end
+endmodule

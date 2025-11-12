@@ -1,0 +1,13 @@
+module function_parity;
+    function parity_odd;
+        input [7:0] x;
+        integer i;
+        begin
+            parity_odd = 0;
+            for (i=0;i<8;i++)
+              parity_odd = parity_odd ^ x[i];
+        end
+    endfunction
+
+    initial $display("Odd parity = %b", parity_odd(8'b10110010));
+endmodule

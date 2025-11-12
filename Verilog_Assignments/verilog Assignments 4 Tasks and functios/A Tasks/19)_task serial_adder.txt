@@ -1,0 +1,24 @@
+module serial_adder;
+    reg [3:0] A , B;
+    reg [4:0] Sum;
+
+    task serial_add;
+        input [3:0] a, b;
+        output [4:0] s;
+        integer i;
+        reg carry;
+        begin
+            carry = 0;
+            for (i=0;i<4;i++) begin
+                s[i] = a[i] ^ b[i] ^ carry;
+                carry = (a[i]&b[i]) | (carry&(a[i]^b[i]));
+            end
+            s[4] = carry;
+            $display("A=%b, B=%b, SUM=%b", a, b, s);
+        end
+    endtask
+
+    initial begin
+        serial_add(A, B, Sum);
+    end
+endmodule

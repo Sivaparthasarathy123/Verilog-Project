@@ -1,0 +1,15 @@
+//Implement a function that calculates a^b using loop (a to the power b).
+
+module func_power;
+    function [7:0] power;
+        input [7:0] a, b;
+        integer i;
+        begin
+            power = 1;
+            for(i=0;i<b;i++)
+                power = power * a;
+        end
+    endfunction
+
+    initial $display("a^b=%0d", power(a,b));
+endmodule

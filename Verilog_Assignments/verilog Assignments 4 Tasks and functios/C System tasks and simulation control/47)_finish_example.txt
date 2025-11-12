@@ -1,0 +1,9 @@
+//testbench that ends simulation after 50 time units using $finish.
+
+module finish_example;
+    initial begin
+        #50;
+        $display("Simulation Finished at %0t", $time);
+        $finish;
+    end
+endmodule

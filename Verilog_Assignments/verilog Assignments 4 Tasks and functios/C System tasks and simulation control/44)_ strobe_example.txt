@@ -1,0 +1,11 @@
+// $strobe to display values at the end of simulation timestep.
+
+module strobe_example;
+    reg [3:0] x, y;
+    initial begin
+        #5 x = 8; y = 3;
+        $strobe("At end of simulation timestep -> X=%0d, Y=%0d, Sum=%0d", x, y, x + y);
+    end
+endmodule
+
+

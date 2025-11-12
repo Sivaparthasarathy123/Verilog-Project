@@ -1,0 +1,17 @@
+//testbench that tests a multiplexer by toggling select lines.
+
+module mux_tb;
+    reg [3:0] in;
+    reg [1:0] sel;
+    wire y;
+
+    mux_4x1 inst(in, sel, y);
+
+    initial begin
+        in = 4'b1010;
+        for(sel=0; sel<4; sel++)
+            
+         #5 $display("sel=%b y=%b", sel, y);
+        #10 $finish;
+    end
+endmodule

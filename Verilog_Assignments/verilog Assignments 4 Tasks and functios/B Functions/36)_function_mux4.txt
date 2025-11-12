@@ -1,0 +1,18 @@
+//Create a function that implements a multiplexer (selects 1 of 4 inputs).
+
+module func_mux4;
+    function [7:0] mux4;
+        input [7:0] a,b,c,d;
+        input [1:0] sel;
+        begin
+            case(sel)
+                2'b00: mux4=a;
+                2'b01: mux4=b;
+                2'b10: mux4=c;
+                2'b11: mux4=d;
+            endcase
+        end
+    endfunction
+
+    initial $display("MUX Out=%0d", mux4(a,b,c,d,sel));
+endmodule

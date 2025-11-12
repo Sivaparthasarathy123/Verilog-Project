@@ -1,0 +1,15 @@
+//testbench to simulate a register file using loops and arrays.
+
+module reg_file_tb;
+    reg [7:0] reg_file [0:3];
+    integer i;
+
+    initial begin
+        for(i=0;i<4;i++)
+            reg_file[i] = i * 10;
+
+        for(i=0;i<4;i++)
+            $display("Reg[%0d] = %0d", i, regfile[i]);
+        $finish;
+    end
+endmodule

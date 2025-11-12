@@ -1,0 +1,15 @@
+//testbench for a 1-bit NOT gate.
+
+module not_gate_tb;
+    reg a;
+    wire y;
+
+    not inst(y, a);
+
+    initial begin
+        a = 0; #5;
+        a = 1; #5;
+        $display("NOT Gate: a=%b, y=%b", a, y);
+        $finish;
+    end
+endmodule

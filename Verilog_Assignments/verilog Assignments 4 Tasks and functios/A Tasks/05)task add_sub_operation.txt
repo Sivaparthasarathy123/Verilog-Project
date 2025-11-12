@@ -1,0 +1,10 @@
+task add_sub_operation;
+        input [7:0] in1, in2;      // Inputs
+        output [8:0] add_result;   // Output for addition
+        output [8:0] sub_result;   // Output for subtraction
+    begin
+        add_result = in1 + in2;    // Perform addition
+        sub_result = in1 - in2;    // Perform subtraction
+        $display("A=%d, B=%d | Sum=%d, Difference=%d", in1, in2, add_result, sub_result);
+    end
+    endtask

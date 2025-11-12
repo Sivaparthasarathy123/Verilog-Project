@@ -1,0 +1,8 @@
+//D/B $write and $display
+
+module write_display_example;
+    initial begin
+        $write(" It does not add new line");
+        $display("It adds new line");        //both are print.
+    end
+endmodule

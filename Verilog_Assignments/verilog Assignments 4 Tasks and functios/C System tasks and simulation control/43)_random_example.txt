@@ -1,0 +1,13 @@
+//Write a testbench that uses $random to generate test data.
+
+module random_example;
+    integer i;
+    reg [7:0] random_val;
+    initial begin
+        for(i=0;i<5;i++) begin
+            random_val = $random;
+            $display("Random[%0d] = %0d", i, random_val);
+            #5;
+        end
+    end
+endmodule

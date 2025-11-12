@@ -1,0 +1,9 @@
+//Use $display to print values of two registers and their sum.
+
+module display_example;
+    reg [7:0] a = 8'd10; 
+    reg [7:0] b = 8'd15;
+    initial begin
+        $display("A = %0d, B = %0d, Sum = %0d", a, b, a + b);
+    end
+endmodule

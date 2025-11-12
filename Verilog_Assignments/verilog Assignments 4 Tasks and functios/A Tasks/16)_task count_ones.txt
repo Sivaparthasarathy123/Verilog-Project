@@ -1,0 +1,20 @@
+module count_ones;
+    reg [7:0] num;
+    reg count;
+
+    task ones_count;
+        input [7:0] val;
+        output  q;
+        integer j;
+        begin
+            cnt = 0;
+            for (j=0; j<8; j=j+1)
+                if (val[j]) q = q + 1;
+            $display("Input=%b, Ones=%0d", val, q);
+        end
+    endtask
+
+    initial begin
+        ones_count(num, count);
+    end
+endmodule

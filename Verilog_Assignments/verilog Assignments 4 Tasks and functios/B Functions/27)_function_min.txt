@@ -1,0 +1,12 @@
+//minimum of two 8 bit numbers
+
+module func_min;
+    function [7:0] min;
+        input [7:0] a,b;
+        begin 
+           min = (a < b) ? a : b; 
+        end
+    endfunction
+
+   initial $display("Min = %0d", min(a,b));
+endmodule

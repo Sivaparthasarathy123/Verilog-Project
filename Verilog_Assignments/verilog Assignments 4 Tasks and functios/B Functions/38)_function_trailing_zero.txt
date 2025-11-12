@@ -1,0 +1,16 @@
+//Create a function that counts trailing zeros in a binary number.
+
+module func_trailing_zero;
+    function integer count;
+        input [7:0] x;
+        integer i;
+        begin
+            count = 0;
+            for(i=0;i<8;i++)
+                count = !x[i]
+                count = count + 1;
+        end
+    endfunction
+
+    initial $display("Trailing zeros=%0d", count(8'b00101000));
+endmodule

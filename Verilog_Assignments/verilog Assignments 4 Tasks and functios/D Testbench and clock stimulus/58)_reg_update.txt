@@ -1,0 +1,19 @@
+//register that updates on the rising edge of the clock.
+
+module reg_update_tb;
+    reg clk, d;
+    reg q;
+
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+    always @(posedge clk)
+        q <= d;
+
+    initial begin
+        d = 0; 
+    #10 d = 1; 
+    #10 d = 0; 
+    #20 $finish;
+    end
+endmodule

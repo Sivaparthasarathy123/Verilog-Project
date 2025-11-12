@@ -1,0 +1,8 @@
+task calculate_square;
+        input [7:0] in;       
+        output [15:0] result;     
+    begin
+        result = in * in;
+        $display("Input = %d, Square = %d", in, result);
+    end
+    endtask

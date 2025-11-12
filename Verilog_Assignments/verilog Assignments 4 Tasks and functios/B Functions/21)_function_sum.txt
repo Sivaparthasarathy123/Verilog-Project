@@ -1,0 +1,13 @@
+//Write a function that returns the sum of two 8-bit inputs.
+
+module function_sum;
+    function [7:0] add8;
+        input [7:0] a, b;
+        begin
+            add8 = a + b;
+        end
+    endfunction
+
+    initial $display("Sum = %0d", add8(8'd12, 8'd20));
+endmodule
+

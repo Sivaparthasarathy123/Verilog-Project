@@ -1,0 +1,13 @@
+//simulation that pauses at time 20 using $stop.
+
+module stop_example;
+    reg a,b;
+    wire c;
+    initial begin
+            a = 0; b = 1;
+        #10 $display("Time=%0t, A=%b, B=%b", (c = a + b));
+        #20 $stop;
+        #30 $display("Time=%0t, A=%b, B=%b", (c = a + b));:wq
+ 
+    end
+endmodule

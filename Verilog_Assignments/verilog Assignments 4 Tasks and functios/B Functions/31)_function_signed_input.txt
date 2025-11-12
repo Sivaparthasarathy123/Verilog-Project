@@ -1,0 +1,12 @@
+//a function to compute the absolute value of a signed input
+
+module func_absolute;
+    function [7:0] absolute_val;
+        input signed [7:0] x;
+        begin 
+           absolute_val = (x < 0) ? -x : x; 
+        end
+    endfunction
+
+    initial $display("Absolute_value(-x)=%0d", absolute_val(-x));
+endmodule

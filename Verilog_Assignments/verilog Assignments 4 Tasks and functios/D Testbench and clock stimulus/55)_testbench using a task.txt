@@ -1,0 +1,23 @@
+//testbench using a task to apply input patterns to a 4-bit adder.
+
+module adder_tb;
+    reg [3:0] a, b;
+    wire [4:0] sum;
+
+    assign sum = a + b;
+
+    task apply_input;
+        input [3:0] x, y;
+        begin
+            a = x; b = y;
+            #5 $display("a=%d b=%d sum=%d", a, b, sum);
+        end
+    endtask
+
+    initial begin
+        apply_input(3, 4);
+        apply_input(7, 8);
+        apply_input(9, 6);
+        #10 $finish;
+    end
+endmodule

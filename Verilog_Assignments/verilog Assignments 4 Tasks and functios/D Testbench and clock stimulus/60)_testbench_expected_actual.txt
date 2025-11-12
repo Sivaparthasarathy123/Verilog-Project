@@ -1,0 +1,19 @@
+//a testbench that compares expected and actual output and flags mismatches.
+
+module compare_tb;
+    reg [3:0] a, b;
+    reg [4:0] expected;
+    wire [4:0] sum;
+
+    assign sum = a + b;
+
+    initial begin
+        a = 3; b = 5; expected = 8;
+        #5;
+        if(sum == expected)
+            $display("PASS: %0d + %0d = %0d", a, b, sum);
+        else
+            $display("FAIL: Expected %0d, Got %0d", expected, sum);
+        $finish;
+    end
+endmodule

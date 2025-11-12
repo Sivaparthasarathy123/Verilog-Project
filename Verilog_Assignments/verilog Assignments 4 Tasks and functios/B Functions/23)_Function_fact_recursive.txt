@@ -1,0 +1,15 @@
+// Write a recursive function to compute factorial using automatic.
+
+module function_fact_recursive;
+    function automatic integer fact;
+        input integer n;
+        begin
+            if (n <= 1) 
+                 fact = 1;
+            else 
+                 fact = n * fact(n-1);
+        end
+    endfunction
+
+    initial $display("Factorial(n) = %0d", fact(n));
+endmodule

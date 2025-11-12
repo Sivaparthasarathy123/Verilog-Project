@@ -1,0 +1,11 @@
+//Use $time and $realtime to print simulation time during execution.
+
+module time_example;
+     reg x, y;
+    initial begin
+            x = 0; y = 1;
+        #5  $display("Time = %0t", $time,x,y);
+        #10 $display("Realtime = %0f", $realtime,x,y);
+        #20 $finish;
+    end
+endmodule

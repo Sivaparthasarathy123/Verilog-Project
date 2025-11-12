@@ -1,0 +1,14 @@
+//Create a function that returns the difference of two inputs.
+
+module func_diff;
+    function [7:0] diff;
+        input [7:0] a,b;
+        begin 
+           diff = a - b; 
+        end
+    endfunction
+
+    initial $display("Diff = %0d", diff(a,b));
+endmodule
+
+

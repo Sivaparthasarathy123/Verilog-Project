@@ -1,0 +1,12 @@
+//a function that checks if the input is power of 2
+
+module func_power2;
+    function power2;
+        input [7:0] x;
+        begin
+            power2 = (x!=0) && ((x & (x-1))==0);
+        end
+    endfunction
+
+    initial $display("8 is power of 2? %b", power2(8));
+endmodule

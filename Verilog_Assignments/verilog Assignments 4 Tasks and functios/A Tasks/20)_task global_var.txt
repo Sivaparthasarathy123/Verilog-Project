@@ -1,0 +1,17 @@
+module global_var;
+    integer counter;
+
+    task increment_global;
+        input [3:0] val;
+        begin
+            counter = counter + val;
+            $display("Counter = %0d", counter);
+        end
+    endtask
+
+    initial begin
+        counter = 0;
+        increment_global(5);
+        increment_global(10);
+    end
+endmodule

@@ -1,0 +1,14 @@
+// a function to reverse the bits of an input
+
+module func_reverse_bits;
+    function [7:0] reverse_bits;
+        input [7:0] x;
+        integer i;
+        begin
+            for(i=0;i<8;i++)
+                reverse_bits[i] = x[7-i];
+        end
+    endfunction
+
+    initial $display("Reversed=%b", reverse_bits(8'b11001010));
+endmodule

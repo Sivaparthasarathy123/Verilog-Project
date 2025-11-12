@@ -1,0 +1,16 @@
+//testbench to test all input combinations of a full adder.
+
+module full_adder_tb;
+    reg a, b, cin;
+    wire sum, cout;
+
+    full_adder inst(a, b, cin, sum, cout);
+
+    integer i;
+    initial begin
+        for(i=0;i<8;i=++)begin
+            {a, b, cin} = i;
+            #5 $display("a=%b | b=%b | cin=%b | sum=%b | cout=%b", a, b, cin, sum, cout);
+        end
+    end
+endmodule

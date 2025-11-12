@@ -1,0 +1,18 @@
+//testbench for a D Flip-Flop with asynchronous reset.
+
+module dff_tb;
+    reg clk, rst, D;
+    wire Q;
+
+    dff inst(clk, rst, D, Q);
+
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+    initial begin
+        rst = 1; D = 0;
+        #10 rst = 0; D = 1;
+        #10 D = 0;
+        #10 $finish;
+    end
+endmodule

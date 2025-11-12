@@ -1,0 +1,14 @@
+//Write a function that returns the Gray code of a 4-bit binary number.
+
+module func_gray_code;
+    function [3:0] gray_code;
+        input [3:0] bin;
+        begin
+            gray_code = bin ^ (bin >> 1);
+        end
+    endfunction
+
+    initial $display("Gray(1010)=%b", gray_code(4'b1010));
+endmodule
+
+

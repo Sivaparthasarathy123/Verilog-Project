@@ -1,0 +1,15 @@
+//a function that performs a logical AND on all bits of a bus.
+
+module func_and_all_bits;
+    function and_all_bits;
+        input [7:0] x;
+        integer i;
+        begin
+            and_all_bits = 1;
+            for(i=0;i<8;i++)
+                and_all_bits = and_all_bits & x[i];
+        end
+    endfunction
+
+    initial $display("All-AND=%b", and_all(8'b11111110));
+endmodule

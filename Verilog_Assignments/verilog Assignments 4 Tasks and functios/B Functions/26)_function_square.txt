@@ -1,0 +1,12 @@
+//square of a number.
+
+module func_square;
+      function [15:0]square;
+           input [7:0] x;
+
+         begin
+            square = x * x;
+         end
+      endfunction
+     initial $display("Sqaure(x) = %0d", Square(x));
+endmodule

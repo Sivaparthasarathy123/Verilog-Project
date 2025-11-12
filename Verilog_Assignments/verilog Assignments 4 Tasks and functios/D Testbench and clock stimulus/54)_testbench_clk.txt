@@ -1,0 +1,13 @@
+//clk in a testbench
+
+module clk_tb;
+    reg clk;
+
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+    initial begin
+        $monitor("Time=%0t clk=%b", $time, clk);
+        #30 $finish;
+    end
+endmodule

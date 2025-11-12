@@ -1,0 +1,9 @@
+task sub_8bit
+    input [7:0] a, b;
+    output [7:0] diff;
+
+begin
+    diff = a-b;
+    $display("diff = %d",diff);
+end
+endtask

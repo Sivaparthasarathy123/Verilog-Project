@@ -1,0 +1,8 @@
+task add_8bit;
+    input [7:0] a, b;
+    output [7:0] sum;
+begin
+    sum = a + b;
+    $display("Sum = %d", sum);
+end
+endtask

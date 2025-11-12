@@ -1,0 +1,11 @@
+task find_max;
+        input [3:0] a, b, c, d;
+        output [3:0] max;
+        begin
+            max = a;
+            if (b > max) max = b;
+            if (c > max) max = c;
+            if (d > max) max = d;
+            $display("Maximum = %0d", max);
+        end
+    endtask

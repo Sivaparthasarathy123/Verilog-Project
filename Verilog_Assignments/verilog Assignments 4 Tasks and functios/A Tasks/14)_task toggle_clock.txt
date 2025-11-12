@@ -1,0 +1,10 @@
+ task toggle_clock;
+        input times;
+        begin
+            clk = 0;
+            repeat(times) begin
+                #5 clk = ~clk;
+                $display("Clock = %0t", clk, $time);
+            end
+        end
+    endtask

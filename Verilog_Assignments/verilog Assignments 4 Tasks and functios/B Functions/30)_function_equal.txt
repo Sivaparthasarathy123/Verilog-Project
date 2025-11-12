@@ -1,0 +1,16 @@
+//function to compare two inputs and return 1 if equal
+
+module func_equal;
+      function integer equal;
+      input a, b;
+   
+      begin 
+          if(a==b)
+              equal = 1;
+          else
+              equal = 0;
+      end
+   
+    initial $display("equal = %0d", input(a, b));
+endmodule
+      

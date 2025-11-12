@@ -1,0 +1,11 @@
+ task blink;
+        input times;
+        begin
+            repeat(times) begin
+                led = 1; #5;
+                $display("LED ON at %0t", $time);
+                led = 0; #5;
+                $display("LED OFF at %0t", $time);
+            end
+        end
+    endtask

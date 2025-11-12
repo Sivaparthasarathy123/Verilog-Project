@@ -1,0 +1,17 @@
+//function to compute even parity using XOR
+
+module func_even_parity;
+    function even_parity;
+        input [7:0] x;
+        integer i;
+        begin
+            even_parity = 0;
+            for (i=0;i<8;i=++)begin
+                even_parity = even_parity ^ x[i];
+                even_parity = ~even_parity;
+            end 
+        end
+    endfunction
+
+    initial $display("Even parity = %b", even_parity(8'b10101010));
+endmodule

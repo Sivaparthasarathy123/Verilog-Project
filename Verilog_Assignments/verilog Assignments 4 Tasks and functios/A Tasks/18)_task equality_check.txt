@@ -1,0 +1,17 @@
+module equality_check;
+    reg [7:0] a=8'hA5, b=8'hA5;
+    reg flag;
+
+    task equal_check;
+        input [7:0] x, y;
+        output reg flag_out;
+        begin
+            flag_out = (x == y);
+            $display("A=%h, B=%h, Equal=%b", x, y, flag_out);
+        end
+    endtask
+
+    initial begin
+        equal_check(a, b, flag);
+    end
+endmodule

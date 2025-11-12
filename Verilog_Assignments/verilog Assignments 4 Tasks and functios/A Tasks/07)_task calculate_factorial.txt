@@ -1,0 +1,12 @@
+task calculate_factorial;
+        input [7:0] n;          // Input number
+        output [31:0] result;   // Output factorial value
+        integer j;              // Loop variable
+    begin
+        result = 1;             // Initialize result
+        for (j = 1; j <= n; j = j + 1) begin
+            result = result * j; // Multiply successively
+        end
+        $display("Number = %0d, Factorial = %0d", n, result);
+    end
+    endtask

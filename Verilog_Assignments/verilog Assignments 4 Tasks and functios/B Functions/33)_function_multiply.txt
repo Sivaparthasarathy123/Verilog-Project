@@ -1,0 +1,15 @@
+//a function that multiplies two numbers without using *.
+
+module func_mult;
+    function integer mult;
+        input integer a,b;
+        integer i;
+        begin
+            mult=0;
+            for(i=0;i<b;i++)
+                mult = mult + a;
+        end
+    endfunction
+
+    initial $display("axb=%0d", mult(a,b));
+endmodule

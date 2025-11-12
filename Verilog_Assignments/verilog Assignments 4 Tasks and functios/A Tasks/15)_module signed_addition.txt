@@ -1,0 +1,15 @@
+module signed_addition;
+    task add_signed;
+        input signed [7:0] a, b;
+        output signed [8:0] sum;
+        begin
+            sum = a + b;
+            $display("Signed Add: %0d + %0d = %0d", a, b, sum);
+        end
+    endtask
+
+    initial begin
+        add_signed(-10, 20, );
+        add_signed(-15, -5, );
+    end
+endmodule
