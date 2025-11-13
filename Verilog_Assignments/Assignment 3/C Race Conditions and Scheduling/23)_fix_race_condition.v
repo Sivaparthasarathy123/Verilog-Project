@@ -1,0 +1,33 @@
+// Use $display to show wrong outputs due to race and fix it using proper constructs.
+
+module fix_race_condition;
+
+  reg clk;
+  reg a,b;
+
+  initial begin
+    clk = 0;
+    forever #5 clk = ~clk;
+  end
+
+  initial begin
+    a = 0;b = 1;
+    $display("Time = %0t | Initial: a = %b, b = %b",$time, a,b);
+    #50 $finish;
+  end
+
+  always@(posedge clk)begin
+    a = b;
+    b = a;
+    $display("Time=%0t | race condition value a = %b, b = %b",$time, a,b);
+  end
+
+  always@(posedge clk)begin
+    a <= b;
+    b <= a;
+    $display("Time=%0t | race condition fixed value a = %b, b = %b",$time, a,b);
+  end
+
+  always@(negedge clk)
+    $display("Time=%0t | a=%b | b = %b", $time, a,b);
+endmodule
