@@ -1,10 +1,23 @@
+module add_sub_task;
+      reg  [7:0] a, b;
+      reg  [8:0] sum, diff;
+
 task add_sub_operation;
-        input [7:0] in1, in2;      // Inputs
-        output [8:0] add_result;   // Output for addition
-        output [8:0] sub_result;   // Output for subtraction
+        input [7:0] in1, in2;    
+        output [8:0] add_result;   
+        output [8:0] sub_result;  
     begin
-        add_result = in1 + in2;    // Perform addition
-        sub_result = in1 - in2;    // Perform subtraction
+        add_result = in1 + in2;    
+        sub_result = in1 - in2;   
         $display("A=%d, B=%d | Sum=%d, Difference=%d", in1, in2, add_result, sub_result);
     end
-    endtask
+ endtask
+
+initial begin
+    a = 8'd15; 
+    b = 8'd40;
+add_sub_operation(a, b, sum, diff);
+$finish;
+end
+
+endmodule
