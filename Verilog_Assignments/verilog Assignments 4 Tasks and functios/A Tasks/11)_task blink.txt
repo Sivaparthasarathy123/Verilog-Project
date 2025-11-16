@@ -1,4 +1,6 @@
- task blink;
+module blink_task;
+    reg led;
+task blink;
         input times;
         begin
             repeat(times) begin
@@ -8,4 +10,13 @@
                 $display("LED OFF at %0t", $time);
             end
         end
+
     endtask
+initial begin
+    initial begin
+        blink(3);
+        blink(5);
+        $finish; 
+    end
+
+endmodule
