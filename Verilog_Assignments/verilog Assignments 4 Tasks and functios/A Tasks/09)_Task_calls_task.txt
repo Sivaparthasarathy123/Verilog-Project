@@ -1,3 +1,5 @@
+module double_add_module;
+   integer a,b,result;
 //Task 1
 task add_task;
         input x, y;
@@ -17,4 +19,19 @@ task double_add_task;
             add_task(temp, q, total);
             $display("Double Add Result = %0d", total);
         end
+
     endtask
+
+ initial begin
+        a = 5;
+        b = 3;
+        double_add_task(a, b, result);   
+
+        a = 10;
+        b = 4;
+        double_add_task(a, b, result);
+
+        $finish;
+    end
+
+endmodule
