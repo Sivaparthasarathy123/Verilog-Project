@@ -1,9 +1,21 @@
- task and_or_operation;
-        input a, b;       
-        output y, z;  
+module and_or;
+    reg a, b;
+    reg y, z;
+task and_or_operation;
+    input a, b;       
+    output y, z;  
     begin
         y = a & b;   
         z  = a | b;   
         $display("Inputs: a=%b, b=%b | AND=%b, OR=%b", a , b, y, z);
     end
-    endtask
+endtask
+
+initial begin
+   a = 1'b1; 
+   b = 1'b0;
+and_or_operation(a, b, y, z);
+$finish;
+end
+
+endmodule
