@@ -1,12 +1,23 @@
+module factorial_task;
+    reg  [7:0]  num;
+    reg  [31:0] fact;
+
 task calculate_factorial;
-        input [7:0] n;          // Input number
-        output [31:0] result;   // Output factorial value
-        integer j;              // Loop variable
+        input [7:0] n;          
+        output [31:0] result;   
+        integer j;              
     begin
-        result = 1;             // Initialize result
+        result = 1;           
         for (j = 1; j <= n; j = j + 1) begin
-            result = result * j; // Multiply successively
+            result = result * j; 
         end
         $display("Number = %0d, Factorial = %0d", n, result);
     end
-    endtask
+ endtask
+initial begin
+   num = 10;
+   calculate_factorial(num, fact);
+    $finish;
+    end
+
+endmodule
