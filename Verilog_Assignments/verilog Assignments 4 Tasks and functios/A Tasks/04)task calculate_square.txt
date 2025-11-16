@@ -1,3 +1,7 @@
+module square_task;
+    reg  [7:0]  a;
+    reg  [15:0] sq;
+
 task calculate_square;
         input [7:0] in;       
         output [15:0] result;     
@@ -5,4 +9,12 @@ task calculate_square;
         result = in * in;
         $display("Input = %d, Square = %d", in, result);
     end
-    endtask
+endtask
+
+initial begin
+    a = 8'd50;
+    calculate_square(a, sq);
+    $finish;
+    end
+
+endmodule
