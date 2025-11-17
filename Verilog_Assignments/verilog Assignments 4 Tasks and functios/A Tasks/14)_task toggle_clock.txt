@@ -1,4 +1,8 @@
- task toggle_clock;
+module toggle_clock_repeat;
+
+    reg clk;
+
+task toggle_clock;
         input times;
         begin
             clk = 0;
@@ -7,4 +11,14 @@
                 $display("Clock = %0t", clk, $time);
             end
         end
+
     endtask
+initial begin
+
+        $display("Toggling clock 3 more times");
+        toggle_clock(3);
+
+        $finish;
+    end
+
+endmodule
