@@ -7,9 +7,8 @@ module reg_file_tb;
     initial begin
         for(i=0;i<4;i++)
             reg_file[i] = i * 10;
-
-        for(i=0;i<4;i++)
             $display("Reg[%0d] = %0d", i, regfile[i]);
         $finish;
     end
 endmodule
+
