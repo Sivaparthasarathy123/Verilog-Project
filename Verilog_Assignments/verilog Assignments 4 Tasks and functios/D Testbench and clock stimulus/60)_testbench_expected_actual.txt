@@ -1,4 +1,4 @@
-//a testbench that compares expected and actual output and flags mismatches.
+//Write a testbench that compares expected and actual output and flags mismatches.
 
 module compare_tb;
     reg [3:0] a, b;
@@ -17,3 +17,4 @@ module compare_tb;
         $finish;
     end
 endmodule
+
