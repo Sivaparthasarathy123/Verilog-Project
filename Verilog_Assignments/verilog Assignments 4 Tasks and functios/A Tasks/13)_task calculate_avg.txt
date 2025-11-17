@@ -1,3 +1,10 @@
+module calculate_avg_val;
+
+    reg  [4:0] a;         
+    wire [5:0] sum;        
+    wire avg_out; 
+
+
 task calculate_avg;
         input [4:0]a;
         utput [5:0]sum;
@@ -10,4 +17,17 @@ task calculate_avg;
             avg_out = sum / 5;
             $display("Average = %0d", avg_out);
         end
+
     endtask
+initial begin
+
+        a = 5'b11111;  
+        #5 calculate_avg(a, sum_reg, avg_reg);
+
+        a = 5'b00110;  
+        #5 calculate_avg(a, sum_reg, avg_reg);
+
+        $finish;
+    end
+
+endmodule
