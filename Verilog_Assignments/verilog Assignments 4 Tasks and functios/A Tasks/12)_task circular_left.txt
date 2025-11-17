@@ -1,3 +1,8 @@
+module circular_left_tb;
+
+    reg  [7:0] in;
+    wire [7:0] out;
+
 task circular_left;
         input [7:0] in;
         output [7:0] out;
@@ -5,4 +10,15 @@ task circular_left;
             out = {in[6:0], in[7]}; 
             $display("Input=%b, Shifted=%b", in, out);
         end
+
     endtask
+ initial begin
+        in = 8'b1011_0011;
+        #5 circular_left(in, out);
+
+        in = 8'b11110000;
+        #5 circular_left(in, out);
+        $finish;
+    end
+
+endmodule
