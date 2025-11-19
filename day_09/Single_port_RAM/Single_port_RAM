@@ -55,7 +55,7 @@ module single_port_RAM_tb;
       addr = i;               
       @(posedge clk);         
       #1;                     
-      $display("READ : time=%0t addr=%0d data_out=%0h expected=%0h",$time, addr, data_out, golden[i]);
+      $display("READ : time=%0t addr=%0d data_out=%0h expected=%0h",$time, addr, data_out, mem[i]);
       
       if(data_out !== mem[i])begin
         $display("ERROR: mismatch at addr %0d (got %0h, exp %0h)", i, data_out, golden[i]);
