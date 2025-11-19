@@ -2,7 +2,7 @@
 
 module single_port_RAM #(parameter DEPTH = 8, WIDTH = 8)(
   input clk, w_en, 
-  input [DEPTH-1:0] addr,
+  input [$clog(DEPTH)-1:0] addr,
   input [WIDTH-1:0] data_in,
   output reg [WIDTH-1:0] data_out);
 
@@ -25,7 +25,7 @@ module single_port_RAM_tb;
   parameter WIDTH = 8;
 
   reg clk, w_en;
-  reg [DEPTH-1:0] addr;      
+  reg [$clog(DEPTH)-1:0] addr;      
   reg [WIDTH-1:0] data_in;
   wire [WIDTH-1:0] data_out;
   
