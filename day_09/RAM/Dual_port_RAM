@@ -14,11 +14,13 @@ always @(posedge clk) begin
     // PORT A
   if(w_en_a)
         mem[addr_a] <= data_in_a;
+  else
         data_out_a <= mem[addr_a];
 
     // PORT B
   if(w_en_b)
         mem[addr_b] <= data_in_b;
+  else
         data_out_b <= mem[addr_b];
 end
 
