@@ -1,4 +1,4 @@
-module Asynchronous_fifo #(parameter DEPTH = 16, DATA_WIDTH = 8)(
+module Asynchronous_fifo #(parameter DEPTH = 8, DATA_WIDTH = 8)(
    input w_clk, r_clk,
    input w_rst, r_rst,
    input w_en, r_en,
